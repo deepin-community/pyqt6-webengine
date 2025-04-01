@@ -1,3 +1,14 @@
+Metadata-Version: 2.1
+Name: PyQt6-WebEngine
+Version: 6.8.0
+Requires-Python: >=3.9
+Summary: Python bindings for the Qt WebEngine framework
+Description-Content-Type: text/markdown
+Project-Url: homepage, https://www.riverbankcomputing.com/software/pyqtwebengine/
+Requires-Dist: PyQt6 (>=6.2.0)
+License: GPL v3
+Author-Email: Riverbank Computing Limited <info@riverbankcomputing.com>
+
 # PyQt6-WebEngine - Python Bindings for the Qt WebEngine Framework
 
 PyQt6-WebEngine is a set of Python bindings for The Qt Company's Qt WebEngine

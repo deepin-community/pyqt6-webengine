@@ -1,15 +1,44 @@
-Source: template-repository
-Section: unknown
+Source: pyqt6-webengine
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Dmitry Shachnev <mitya57@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               libqt6opengl6-dev,
+               pyqt6-dev,
+               python3-all-dev,
+               python3-pyqtbuild (>= 1.17),
+               qt6-base-dev (>= 6.2.4+dfsg-3~),
+               qt6-webengine-dev,
+               sip-tools (>= 6.9)
+Rules-Requires-Root: no
+Standards-Version: 4.7.0
+Homepage: https://www.riverbankcomputing.com/software/pyqtwebengine/intro
+Vcs-Git: https://salsa.debian.org/python-team/packages/pyqt6-webengine.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/pyqt6-webengine
 
-Package: template-repository
+Package: pyqt6-webengine-dev
+Architecture: all
+Depends: pyqt6-dev, ${misc:Depends}
+Description: Development files for PyQt6-WebEngine
+ PyQt6-WebEngine is a set of Python bindings for the Qt WebEngine framework.
+ .
+ This package contains the source SIP files from which the Python bindings for
+ Qt WebEngine are created.
+
+Package: python3-pyqt6.qtwebengine
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: python3-pyqt6.qtqml,
+         python3-pyqt6.qtwebchannel,
+         python3-pyqt6.sip (<< 14),
+         python3-pyqt6.sip (>= 13),
+         ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends}
+Description: Python bindings for the Qt 6 WebEngine framework
+ PyQt6-WebEngine is a set of Python bindings for the Qt WebEngine framework.
+ The framework provides the ability to embed web content in applications and
+ is based on the Chromium browser engine. The bindings sit on top of PyQt6 and
+ are implemented as three separate modules corresponding to the different
+ libraries that make up the framework.
