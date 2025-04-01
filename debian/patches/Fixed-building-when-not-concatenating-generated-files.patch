@@ -1,0 +1,24 @@
+From: Phil Thompson <phil@riverbankcomputing.com>
+Date: Sat, 14 Dec 2024 23:52:09 +0300
+Subject: Fixed building when not concatenating generated files
+
+Origin: upstream, changeset 546f20b0bde8
+---
+ sip/QtWebEngineCore/qwebengineframe.sip | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/sip/QtWebEngineCore/qwebengineframe.sip b/sip/QtWebEngineCore/qwebengineframe.sip
+index d5420e6..9bdf528 100644
+--- a/sip/QtWebEngineCore/qwebengineframe.sip
++++ b/sip/QtWebEngineCore/qwebengineframe.sip
+@@ -28,6 +28,10 @@ class QWebEngineFrame /NoDefaultCtors/
+ #include <qwebengineframe.h>
+ %End
+ 
++%TypeCode
++#include <QVariant>
++%End
++
+ public:
+     bool isValid() const;
+     QString name() const;

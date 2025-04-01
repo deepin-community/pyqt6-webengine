@@ -1,0 +1,7 @@
+Test-Command: debian/tests/test_import.sh \
+    PyQt6.QtWebEngineCore \
+    PyQt6.QtWebEngineQuick \
+    PyQt6.QtWebEngineWidgets
+Depends: python3-all-dbg, python3-pyqt6.qtwebengine
+Restrictions: superficial
+Architecture: amd64 arm64 armhf i386
